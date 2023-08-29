@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/845tkn6rv3lyfx8o?svg=true)](https://ci.appveyor.com/project/juliaivi/ahj-12-1-front)
+
 # Домашнее задание к занятию "12. WebWorkers, ServiceWorkers"
 
 Правила сдачи задания:
