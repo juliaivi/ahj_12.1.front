@@ -26,7 +26,7 @@ self.addEventListener('activate', (e) => { // используют для очи
     caches.keys().then((keyList) => // получаем все ключи в хранилище, получаем массив ключей
       Promise.all(keyList.map((key) => { // проходимся по ключу и удоляем все хранилища которые не соответствуют задонному ключу. Необходимо для того чтобы обновлять данные в хранилище когда нам будет нужно
         if (key !== CacheKey) { // автоматически удалить данное хранилище нельзя до тех пор пока приложение использует хотя бы 1 файл из этого хранилища, по этому для гарантированого обновления хеша нужно использовать такой мехонизм
-          return caches.delete(key);// если мы хотим одновить кеш, просто меняем значение CacheKey
+          return caches.delete(key);// если мы хотим обновить кеш, просто меняем значение CacheKey
         }
       }))),
   );
@@ -83,7 +83,7 @@ self.addEventListener('fetch', (e) => { // вызывается тогда, ко
   }
 
   if (url.pathname.startsWith()) {
-    e.respondWith(fetchPriorityThenCacheThenImageFallback(e));// ошибка не нравится
+    e.respondWith(fetchPriorityThenCacheThenImageFallback(e));//
     return;
   }
 

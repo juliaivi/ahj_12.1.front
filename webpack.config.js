@@ -7,7 +7,10 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   devtool: 'inline-source-map',
-  entry: './index.js',
+  entry: {
+    index: './index.js',
+    // sw: './service-worker.js', - второй вариант
+  },
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -43,7 +46,7 @@ module.exports = {
     // new CleanWebpackPlugin(),
 
     new WorkboxPlugin.GenerateSW({
-      swDest: 'service-worker.js', // который указывает имя и путь к файлу сервис-воркера
+      swDest: './service-worker.js', // который указывает имя и путь к файлу сервис-воркера
       clientsClaim: true, // которые позволяют сервис-воркеру немедленно стать активным и управлять всеми вкладками с вашим веб-приложением
       skipWaiting: true,
     }),

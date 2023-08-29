@@ -12,8 +12,8 @@ export default class NewsMessage {
 
   init() {
     this.addSWorker();
-    creatLoading();
     this.createRequest();
+    creatLoading();
   }
 
   async createRequest() { // запрос
@@ -39,7 +39,7 @@ export default class NewsMessage {
     }
 
     if ('serviceWorker' in navigator) { // создаем экземпляр. Проверка наличия api  сервис воркера в объекте навигатор
-      navigator.serviceWorker.register('/service-worker.js', { scope: './' }) // , ./ корень сайта  путь, опции/ scope: - это папка внутри сайта на которую будут применятся дествия сервис воркера т.е. это те url которые будут проходить через сервис воркер
+      navigator.serviceWorker.register('service-worker.js', { scope: './' }) // , ./ корень сайта  путь, опции/ scope: - это папка внутри сайта на которую будут применятся дествия сервис воркера т.е. это те url которые будут проходить через сервис воркер
         .then((reg) => { // создаем экземпляр. О регистрации сервис воркера расположеного в файле по передоваемому урлу
           console.log(`registration succeded/ Scope is ${reg.scope}`);
         }).catch((error) => {

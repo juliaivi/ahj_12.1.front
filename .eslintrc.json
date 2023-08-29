@@ -17,6 +17,11 @@
         "eqeqeq":"off",
         "prefer-destructuring": "off",
         "max-len":"off",
-        "no-console":"off"
+        "no-console":"off",
+        "no-plusplus":"off",
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        "consistent-return":"off",
+       "implicit-arrow-linebreak": "off",
+       "array-callback-return":"off"
     }
 }
