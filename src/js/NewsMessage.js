@@ -7,7 +7,8 @@ export default class NewsMessage {
     this.newsList = this.container.querySelector('.news__list');
     this.error = this.container.querySelector('.error');
     this.data = null;
-    this.url = 'http://localhost:3000/news';
+    this.url = 'https://ahj-12-1-backv1.onrender.com/news';
+    // this.url = 'http://localhost:3000/news';
   }
 
   init() {
