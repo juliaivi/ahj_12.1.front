@@ -82,7 +82,7 @@ self.addEventListener('fetch', (e) => { // вызывается тогда, ко
     return;
   }
 
-  if (url.pathname.startsWith()) {
+  if (url.pathname.startsWith('/somepath')) {
     e.respondWith(fetchPriorityThenCacheThenImageFallback(e));//
     return;
   }
